@@ -1,4 +1,5 @@
 class Solution {
+    
     public List<List<Integer>> threeSum(int[] nums) {
        List<List<Integer>> ans = new ArrayList<>();
        Arrays.sort(nums);
@@ -20,7 +21,8 @@ class Solution {
                             ans1.add(nums[i]);
                             ans1.add(nums[j]);
                             ans1.add(nums[k]);
-                            ans.add(ans1);
+                            if (!ans.contains(ans1)) {
+                            ans.add(ans1);}
                         }
                     }
                 }
