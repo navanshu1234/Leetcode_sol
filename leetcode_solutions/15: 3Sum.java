@@ -5,10 +5,11 @@ class Solution {
        Arrays.sort(nums);
        int n = nums.length;
        int sum =0;
-       int x = 0;
+       int x =0;
+       
        for(int i =0;i<n;i++)
        {
-           for(int j =0;j<n;j++)
+           for(int j =1;j<n;j++)
             {
                 for(int k =0;k<n;k++)
                 {
@@ -21,8 +22,10 @@ class Solution {
                             ans1.add(nums[i]);
                             ans1.add(nums[j]);
                             ans1.add(nums[k]);
+                            Collections.sort(ans1); 
                             if (!ans.contains(ans1)) {
-                            ans.add(ans1);}
+                            ans.add(ans1);
+                            x--;}
                         }
                     }
                 }
@@ -30,4 +33,7 @@ class Solution {
        }
        return ans;
     }
-}
+} 
+// time limit exceed
+
+
