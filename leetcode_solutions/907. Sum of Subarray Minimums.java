@@ -60,3 +60,7 @@ class Solution {
         return sum%mod;
     }
 }
+/* Another approach:
+    find all subarray(contigous) (the subarray division is similar to all sub string finding of a string, You can also try this question by converting given array to string and divide them into substring using s.substring(i,j+1) to get all contigous substring), size= (n*(n+1))/2 and add to arraylist which is added to list of arraylist
+    then find all min in List and add them;
+    then divide by modulo 
