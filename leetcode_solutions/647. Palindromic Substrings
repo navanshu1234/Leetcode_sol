@@ -56,3 +56,23 @@ class Solution {
     }
 }
 //memory limit exceed
+
+class Solution:
+    def countSubstrings(self, s: str) -> int:
+        arr = []
+        for i in range(len(s)):
+            for j in range(i + 1, len(s) + 1):
+                arr.append(s[i:j])
+        
+        print(arr)
+        
+        count = 0
+
+        for st in arr:
+            reversed_st = st[::-1]
+            if st == reversed_st:
+                count += 1
+        
+        return count
+// output limit exceed
+
