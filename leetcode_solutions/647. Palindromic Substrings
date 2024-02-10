@@ -26,3 +26,33 @@ class Solution {
     }
 }
 // memory limit exceed case 128
+class Solution {
+    public int countSubstrings(String s) {
+        ArrayList<String> arr = new ArrayList<>();
+        for(int i=0;i<s.length();i++)
+        {
+            for(int j =1;j<=s.length();j++)
+            {   if(j>i){
+                String st = s.substring(i,j);
+                arr.add(st);}
+            }
+        }
+        System.out.println(arr);
+        int count = 0;
+        for(int i=0;i<arr.size();i++)
+        {
+            String st = "";
+            for (int j = arr.get(i).length()-1; j >= 0; j--)
+            {
+                st = st + arr.get(i).charAt(j);
+            }
+                
+            if(arr.get(i).equals(st))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+//memory limit exceed
