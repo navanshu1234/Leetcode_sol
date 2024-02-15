@@ -1,0 +1,33 @@
+class Solution {
+    public int myAtoi(String s) {
+        boolean neg = false;
+        String ans = "";
+        for(int i=0;i<s.length();i++)
+        {
+            char c = s.charAt(i);
+            if(c==' ' && ans.equals(""))
+            {
+                continue;
+            }
+            if(Character.isDigit(c))
+            {
+            ans = ans + Character.toString(c);
+            System.out.println(ans);
+            }
+            else if(c=='-')
+            {
+                neg = true;
+            }
+            else if(c == ' ')
+            {
+                break;
+            }
+        }
+        int a = Integer.parseInt(ans);;
+        if(neg==true)
+        {
+            return -a;
+        }
+        return a;
+    }
+} // it will provide output even if integer is present after some words
