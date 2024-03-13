@@ -1,0 +1,16 @@
+class Solution {
+    public int pivotInteger(int n) {
+        int x = 1;
+        for(int i=1;i<=n;i++)
+        {   
+            x = i;
+            int sum1 = (x*(1+x))/2;
+            int sum2 = ((n-x+1)*(x+n))/2;
+            if(sum1==sum2)
+            {
+                return x;
+            }
+        }
+        return -1;
+    }
+}
