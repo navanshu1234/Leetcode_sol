@@ -1,0 +1,31 @@
+class Solution {
+    public String reverseWords(String s) {
+        ArrayList<String> ar = new ArrayList<>();
+        String temp = "";
+        for(int i=0;i<s.length();i++)
+        {
+            char c = s.charAt(i);
+            if(c!=' ')
+            {
+                temp = temp + String.valueOf(c); 
+            }
+            if((c==' ' || i == s.length()-1) && !temp.equals(""))
+            {
+                ar.add(temp);
+                temp = "";
+            }
+           
+        }
+        Collections.reverse(ar);
+        String ans = "";
+        for(int i=0;i<ar.size();i++)
+        {
+            ans = ans + ar.get(i);
+            if(i!=ar.size()-1)
+            {
+                ans = ans + " ";
+            }
+        }
+        return ans;
+    }
+}
