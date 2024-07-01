@@ -1,0 +1,27 @@
+class Solution {
+    public int[] evenOddBit(int n) {
+        int c=0;
+        int arr[] = new int[2];
+        String ans = "";
+        int i =0;
+        while(n>0)
+        {   
+            c = n%2;
+            ans = ans + c;
+            n = n/2;
+            if(ans.charAt(i)=='1')
+           {
+            if(i%2==0)
+            {
+                arr[0]++;
+            }
+            else
+            {
+                arr[1]++;
+            }
+           }
+           i++;
+        }      
+        return arr;
+    }
+}
