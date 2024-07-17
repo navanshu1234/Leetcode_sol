@@ -20,3 +20,26 @@ class HelloWorld {
         System.out.println("permutation="+p);
     }
 }
+
+//without fact function
+import java.lang.*;
+import java.util.*;
+import java.io.*;
+class HelloWorld {
+   
+    public static void main(String[] args) {
+        int n = 7; //input n
+        int r = 2; //input r
+        int p = 1;
+        if(n<r)
+        {
+            System.out.println("invalid");
+        }
+        else{
+        for(int i=n;i>n-r;i--)
+        {
+            p = p*i;
+        }
+        System.out.println(p);}
+    }
+}
